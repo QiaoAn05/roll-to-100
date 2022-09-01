@@ -26,6 +26,7 @@ btnRoll.addEventListener('click', () => {
   }; 
 
   current = document.querySelector(`#current${player}`);
+  score = document.querySelector(`#score${player}`);
 });
 
 btnHold.addEventListener('click', () => {
