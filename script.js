@@ -70,12 +70,13 @@ btnHold.addEventListener('click', () => {
         scoreNumb2 += currentNumb;
         score.innerHTML = scoreNumb2;
     };
+    
     currentNumb = 0;
     current.innerHTML = currentNumb;
     playerTurn();
     current = document.querySelector(`#current${player}`);
     score = document.querySelector(`#score${player}`);
-    
+    victory();
 });
 
 
@@ -83,3 +84,14 @@ btnHold.addEventListener('click', () => {
 btnNewGame.addEventListener('click', () => {
     newGame();
 });
+
+//victory condition
+function victory() {
+  if (scoreNumb1 >= 20) {
+    alert(`Player1 wins !`);
+    newGame();
+  } else if (scoreNumb2 >= 20) {
+    alert(`Player2 wins !`);
+    newGame();
+  };
+};
