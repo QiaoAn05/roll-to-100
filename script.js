@@ -16,12 +16,16 @@ let scoreNumb2;
 newGame()
 
 function newGame() {
+    document.querySelector(`#score2`).innerHTML = 0;
     player = 1;
     current = document.querySelector(`#current${player}`);
     score = document.querySelector(`#score${player}`);
     currentNumb = 0;
     scoreNumb1 = 0;
     scoreNumb2 = 0;
+    current.innerHTML = currentNumb;
+    score.innerHTML = scoreNumb1;
+    document.querySelector('#image').src = `./img/logo.png`;
 };
 
 //function to change player
@@ -30,7 +34,7 @@ function playerTurn() {
     player = 2;
     current = document.querySelector(`#current${player}`);
     score = document.querySelector(`#score${player}`);
-  } else if (player ==2) {
+  } else if (player == 2) {
     player = 1;
     current = document.querySelector(`#current${player}`);
     score = document.querySelector(`#score${player}`);
@@ -39,7 +43,14 @@ function playerTurn() {
 
 //button rolling-dice to roll the dice and increase the current score
 btnRoll.addEventListener('click', () => {
+
+  //random number
   random = Math.floor(Math.random() * 6 + 1);
+
+  //dice face display
+  document.querySelector('#image').src = `./img/d${random}.png`;
+
+  //gameplay
   if (random == 1) {
     currentNumb = 0;
     current.innerHTML = currentNumb;
