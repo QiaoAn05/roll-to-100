@@ -1,8 +1,26 @@
 html, body {
-    height: 100%;
+    height: 100vh;
     width: 100%;
   }
-  
+
+  .container {
+    width: 50%;
+    height: 80%;
+    background: pink;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+  }
+
+  button, img {
+    align-self: center;
+  }
+
+  .box-p1, .box-p2 {
+    display: flex;
+    justify-content: space-evenly;
+  }
+
   img {
     height: 200px;
     width: 200px;
