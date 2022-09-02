@@ -12,12 +12,12 @@ html, body {
     flex-direction: column;
     justify-content: space-evenly;
     color: white;
-    font-size: 2rem;
+    font-size: 2.5rem;
   }
 
   button, img {
     align-self: center;
-    font-size: 2.5rem;
+    font-size: 2.8rem;
   }
 
   button {
@@ -54,8 +54,8 @@ html, body {
  
 
   img {
-    height: 200px;
-    width: 200px;
+    height: 50%;
+    width: 50%;
   }
 
   #victory {
