@@ -6,20 +6,42 @@ html, body {
   .container {
     width: 50%;
     height: 80%;
-    background: pink;
+    background: darkcyan;
     display: flex;
     flex-direction: column;
     justify-content: space-evenly;
+    color: white;
   }
 
   button, img {
     align-self: center;
   }
 
+  button {
+    background: transparent;
+    border: solid 1px white;
+    box-shadow: 0 0 2px black;
+  }
+
   .box-p1, .box-p2 {
     display: flex;
     justify-content: space-evenly;
   }
+
+  .box-player-score1, .box-player-score2 {
+    display: flex;
+    justify-content: space-evenly;
+    width: 50%;
+  }
+
+  .box-current {
+    background: red;
+    display: flex;
+    justify-content: space-between;
+    width: 20%;
+  }
+
+ 
 
   img {
     height: 200px;
