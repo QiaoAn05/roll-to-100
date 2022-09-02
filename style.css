@@ -7,3 +7,7 @@ html, body {
     height: 200px;
     width: 200px;
   }
+
+  #victory {
+    box-shadow:  0 0 3px black;
+  }

@@ -26,6 +26,7 @@ function newGame() {
     current.innerHTML = currentNumb;
     score.innerHTML = scoreNumb1;
     document.querySelector('#image').src = `./img/logo.png`;
+    document.querySelector('#victory').style.display = 'none';
 };
 
 //function to change player
@@ -88,10 +89,14 @@ btnNewGame.addEventListener('click', () => {
 //victory condition
 function victory() {
   if (scoreNumb1 >= 20) {
-    alert(`Player1 wins !`);
-    newGame();
+    //document.querySelector('#victory-box').style.display = 'inline-block';
+    //var x = document.getElementById('victory-box');
+    document.querySelector('#victory').style.display = 'inline-block';
+    document.querySelector('#victory').innerHTML = "Player 1 wins !";
+    
+    //newGame();
   } else if (scoreNumb2 >= 20) {
-    alert(`Player2 wins !`);
-    newGame();
+    document.querySelector('#victory').style.display = 'inline-block';
+    document.querySelector('#victory').innerHTML = "Player 2 wins !";
   };
 };
