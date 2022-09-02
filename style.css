@@ -21,6 +21,7 @@ html, body {
     background: transparent;
     border: solid 1px white;
     box-shadow: 0 0 2px black;
+    color: white;
   }
 
   .box-p1, .box-p2 {
