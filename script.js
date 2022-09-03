@@ -8,6 +8,9 @@ let player;
 let random;
 let current = document.querySelector(`#current${player}`);
 let score = document.querySelector(`#score${player}`);
+let active1 = document.querySelector(`#active1`);
+let active2 = document.querySelector(`#active2`);
+active1.style.visibility = 'visible';
 let currentNumb;
 let scoreNumb1;
 let scoreNumb2;
@@ -27,6 +30,7 @@ function newGame() {
     score.innerHTML = scoreNumb1;
     document.querySelector('#image').src = `./img/logo.png`;
     document.querySelector('#victory').style.display = 'none';
+    active2.style.visibility = 'hidden';
 };
 
 //function to change player
@@ -35,10 +39,14 @@ function playerTurn() {
     player = 2;
     current = document.querySelector(`#current${player}`);
     score = document.querySelector(`#score${player}`);
+    active1.style.visibility = 'hidden';
+    active2.style.visibility = 'visible';
   } else if (player == 2) {
     player = 1;
     current = document.querySelector(`#current${player}`);
     score = document.querySelector(`#score${player}`);
+    active2.style.visibility = 'hidden';
+    active1.style.visibility = 'visible';
   };
 };
 

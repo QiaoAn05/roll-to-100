@@ -47,3 +47,8 @@ html, body {
   button {
     font-size: 2rem;;
   }
+
+  #active1, #active2 {
+    color: red;
+    font-weight: bold;
+  }
