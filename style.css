@@ -6,8 +6,8 @@ html, body {
   }
 
   img {
-    height: 300px;
-    width: 300px;
+    height: 250px;
+    width: 250px;
   }
 
   .container {
@@ -42,10 +42,15 @@ html, body {
 
   .box-current {
     background: red;
+    color: white;
+    padding: 1%;
   }
 
   button {
-    font-size: 2rem;;
+    font-size: 2.2rem;
+    border: solid 2px black;
+    border-radius: 5px;
+    cursor: pointer;
   }
 
   #active1, #active2 {
