@@ -76,7 +76,7 @@ html, body {
     .container {
       display: flex;
       flex-direction: column;
-      background: pink;
+      background: rgba(63, 81, 110, .2);
     }
     .container :nth-child(1) { order: 2; }
     .container :nth-child(2) { order: 1; }
@@ -84,19 +84,18 @@ html, body {
 
     .box-p1, .box-p2, .box-btn {
       text-align: center;
-      background: green;
       width: 100%;
       display: flex;
     }
 
     .box-btn {
       flex-direction: column-reverse;
+      box-shadow: none;
     }
 
     .box-p1 {
       flex-direction: row-reverse;
       height: 100%;
-      background: pink;
     }
 
     .box-p2 {
@@ -105,7 +104,6 @@ html, body {
 
     .box-player-score1 {
       display: flex;
-      background: blue;
       width: 50%;
       justify-content: space-between;
     }
@@ -115,7 +113,6 @@ html, body {
 
     .box-player-score2 {
       display: flex;
-      background: blue;
       width: 50%;
       justify-content: space-between;
     }
