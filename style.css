@@ -82,15 +82,34 @@ html, body {
     .container :nth-child(2) { order: 1; }
     .container :nth-child(3) { order: 3; }
 
-    .box-p1, .box-p2, .box-btn {
+    .box-p1, .box-p2 {
       text-align: center;
       width: 100%;
       display: flex;
     }
 
     .box-btn {
-      flex-direction: column-reverse;
+      display: flex;
+      width: 100%;
+      flex-direction: column;
       box-shadow: none;
+      margin-top: 5%;
+    }
+    .box-btn :nth-child(1) { order: 1; }
+    .box-btn :nth-child(2) { order: 2; }
+    .box-btn :nth-child(3) { order: 3; }
+    .box-btn :nth-child(4) { order: 4; }
+
+    img {
+      width: 200px;
+      height: 200px;
+      margin-bottom: 3%;
+    }
+
+    button:hover {
+      transform: none;
+      background:rgba(229, 235, 245, 0.8);
+      box-shadow: 0 5px 15px rgba(5, 5, 5, 0.4);
     }
 
     .box-p1 {
