@@ -15,6 +15,7 @@ html, body {
     display: flex;
     align-items: center;
     font-size: 3rem;
+    background: linear-gradient(45deg, rgba(63, 81, 110, .8), white);
   }
 
   .box-p1, .box-p2, .box-btn {
@@ -28,7 +29,8 @@ html, body {
   }
 
   .box-btn {
-    background: rgba(168, 198, 244, 0.4);
+    background: rgba(218, 230, 249, 0.2);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, .5);
   }
 
   .box-roll-hold {
