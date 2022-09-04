@@ -18,6 +18,9 @@ let scoreNumb2;
 newGame()
 
 function newGame() {
+    btnRoll.style.display = 'inline-block';
+    btnHold.style.display = 'inline-block';
+    document.querySelector('#image').style.display = 'inline-block';
     document.querySelector(`#score2`).innerHTML = 0;
     player = 1;
     current = document.querySelector(`#current${player}`);
@@ -101,10 +104,17 @@ function victory() {
     //var x = document.getElementById('victory-box');
     document.querySelector('#victory').style.display = 'inline-block';
     document.querySelector('#victory').innerHTML = "Player 1 wins !";
+
+    document.querySelector('#image').style.display = 'none';
+    btnRoll.style.display = 'none';
+    btnHold.style.display = 'none';
     
-    //newGame();
   } else if (scoreNumb2 >= 20) {
     document.querySelector('#victory').style.display = 'inline-block';
     document.querySelector('#victory').innerHTML = "Player 2 wins !";
+
+    document.querySelector('#image').style.display = 'none';
+    btnRoll.style.display = 'none';
+    btnHold.style.display = 'none';
   };
 };

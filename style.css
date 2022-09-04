@@ -85,6 +85,13 @@ img {
   justify-content: space-evenly;
 }
 
+#victory {
+  font-size: 4rem;
+  font-weight: bold;
+  color: red;
+  margin-bottom: 10%;
+}
+
 @media screen and (min-width: 820px) {
   .container {
     background: linear-gradient(45deg, rgba(63, 81, 110, .8), white);
