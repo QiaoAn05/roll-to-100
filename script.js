@@ -137,7 +137,7 @@ btnNewGame.addEventListener('click', () => {
 
 //victory condition
 function victory() {
-  if (scoreNumb1 >= 10) {
+  if (scoreNumb1 >= 100) {
     victoryAudio.play();
     document.querySelector('#victory').style.display = 'inline-block';
     document.querySelector('#victory').innerHTML = `${name1.innerHTML} wins !`;
@@ -146,7 +146,7 @@ function victory() {
     btnRoll.style.display = 'none';
     btnHold.style.display = 'none';
     
-  } else if (scoreNumb2 >= 10) {
+  } else if (scoreNumb2 >= 100) {
     victoryAudio.play();
     document.querySelector('#victory').style.display = 'inline-block';
     document.querySelector('#victory').innerHTML = `${name2.innerHTML} wins !`;
