@@ -16,10 +16,18 @@ let scoreNumb2;
 let name1 = document.querySelector('#name1');
 let name2 = document.querySelector('#name2');
 
+//sound
+const select = new Audio('./audio/Cursor.ogg');
+const decision = new Audio('./audio/Decision.ogg');
+const faceOne = new Audio('./audio/One.ogg');
+const newGameAudio = new Audio('./audio/NewGame.ogg');
+const victoryAudio = new Audio('./audio/Victory.ogg');
+
 //new Game init after load and function
 newGame()
 
 function newGame() {
+    newGameAudio.play();
     name1.innerHTML = prompt('Choose a name for player 1:');
     name2.innerHTML = prompt('Choose a name for player 2:')
     btnRoll.style.display = 'inline-block';
@@ -60,6 +68,8 @@ function playerTurn() {
 //button rolling-dice to roll the dice and increase the current score
 btnRoll.addEventListener('click', () => {
 
+  select.play();
+
   //random number
   random = Math.floor(Math.random() * 6 + 1);
 
@@ -68,6 +78,7 @@ btnRoll.addEventListener('click', () => {
 
   //gameplay
   if (random == 1) {
+    faceOne.play();
     currentNumb = 0;
     current.innerHTML = currentNumb;
     playerTurn();
@@ -79,6 +90,7 @@ btnRoll.addEventListener('click', () => {
 
 //button hold to keep the score
 btnHold.addEventListener('click', () => {
+    decision.play();
     if (player == 1) {
         scoreNumb1 += currentNumb;
         score.innerHTML = scoreNumb1;
@@ -104,6 +116,7 @@ btnNewGame.addEventListener('click', () => {
 //victory condition
 function victory() {
   if (scoreNumb1 >= 10) {
+    victoryAudio.play();
     document.querySelector('#victory').style.display = 'inline-block';
     document.querySelector('#victory').innerHTML = `${name1.innerHTML} wins !`;
 
@@ -112,6 +125,7 @@ function victory() {
     btnHold.style.display = 'none';
     
   } else if (scoreNumb2 >= 10) {
+    victoryAudio.play();
     document.querySelector('#victory').style.display = 'inline-block';
     document.querySelector('#victory').innerHTML = `${name2.innerHTML} wins !`;
 
