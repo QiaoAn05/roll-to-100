@@ -91,15 +91,11 @@ img {
 }
 
 #victory {
-  font-size: 3.5rem;
+  font-size: 3.3rem;
   font-weight: bold;
   color: red;
   margin-bottom: 10%;
   text-align: center;
-}
-
-.icon-new-game {
-  font-size: 3rem;
 }
 
 @media screen and (min-width: 820px) {
@@ -159,6 +155,7 @@ img {
     box-shadow: 0 5px 15px rgba(0, 0, 0, .2);
     width: 50%;
     align-self: center;
+    vertical-align: middle;
   }
 
   .box-roll-hold {
