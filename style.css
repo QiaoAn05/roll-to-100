@@ -71,6 +71,7 @@ img {
     cursor: pointer;
     background: transparent;
     font-family: 'Lato', sans-serif;
+    color: white;
   }
 
   button:hover {
@@ -111,6 +112,7 @@ img {
   .box-btn {
     display: flex;
     background: rgba(218, 230, 249, 0.2);
+    border: solid 2px black;
     box-shadow: 0 5px 15px rgba(0, 0, 0, .5);
   }
     .box-btn :nth-child(1) {order: 1}
