@@ -98,6 +98,10 @@ img {
   text-align: center;
 }
 
+.icon-new-game {
+  font-size: 3rem;
+}
+
 @media screen and (min-width: 820px) {
   .container {
     background: linear-gradient(45deg, rgba(63, 81, 110, .8), white);

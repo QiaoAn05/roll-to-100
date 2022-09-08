@@ -13,11 +13,15 @@ let active2 = document.querySelector(`#active2`);
 let currentNumb;
 let scoreNumb1;
 let scoreNumb2;
+let name1 = document.querySelector('#name1');
+let name2 = document.querySelector('#name2');
 
 //new Game init after load and function
 newGame()
 
 function newGame() {
+    name1.innerHTML = prompt('Choose a name for player 1:');
+    name2.innerHTML = prompt('Choose a name for player 2:')
     btnRoll.style.display = 'inline-block';
     btnHold.style.display = 'inline-block';
     document.querySelector('#image').style.display = 'inline-block';
@@ -100,10 +104,8 @@ btnNewGame.addEventListener('click', () => {
 //victory condition
 function victory() {
   if (scoreNumb1 >= 10) {
-    //document.querySelector('#victory-box').style.display = 'inline-block';
-    //var x = document.getElementById('victory-box');
     document.querySelector('#victory').style.display = 'inline-block';
-    document.querySelector('#victory').innerHTML = "Player 1 wins !";
+    document.querySelector('#victory').innerHTML = `${name1.innerHTML} wins !`;
 
     document.querySelector('#image').style.display = 'none';
     btnRoll.style.display = 'none';
@@ -111,7 +113,7 @@ function victory() {
     
   } else if (scoreNumb2 >= 10) {
     document.querySelector('#victory').style.display = 'inline-block';
-    document.querySelector('#victory').innerHTML = "Player 2 wins !";
+    document.querySelector('#victory').innerHTML = `${name2.innerHTML} wins !`;
 
     document.querySelector('#image').style.display = 'none';
     btnRoll.style.display = 'none';
