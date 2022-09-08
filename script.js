@@ -23,14 +23,25 @@ const faceOne = new Audio('./audio/One.ogg');
 const newGameAudio = new Audio('./audio/NewGame.ogg');
 const victoryAudio = new Audio('./audio/Victory.ogg');
 
-function noName() {
-  if (name1.innerHTML === "") {
-      name1.innerHTML = "Player 1";
-  }
-  if (name2.innerHTML === "") {
-    name2.innerHTML = "Player 2";
+function wrongName1() {
+  if (name1.innerHTML.length <= 0) {
+    name1.innerHTML = "Player 1";
+  } else if (name1.innerHTML.length > 8) {
+    alert('Please to enter a name with 8 caracters maximum.');
+    name1.innerHTML = prompt('Choose a name for player 1:');
+    return wrongName1();
   }
 };
+function wrongName2() {
+  if (name2.innerHTML.length <= 0) {
+    name2.innerHTML = "Player 2";
+  } else if (name2.innerHTML.length >= 8) {
+    alert('Please to enter a name with 8 caracters maximum.');
+    name2.innerHTML = prompt('Choose a name for player 2:');
+    return wrongName2();
+  }
+};
+
 
 //new Game init after load and function
 newGame()
@@ -38,8 +49,9 @@ newGame()
 function newGame() {
     newGameAudio.play();
     name1.innerHTML = prompt('Choose a name for player 1:');
+    wrongName1()
     name2.innerHTML = prompt('Choose a name for player 2:');
-    noName();
+    wrongName2()
     btnRoll.style.display = 'inline-block';
     btnHold.style.display = 'inline-block';
     document.querySelector('#image').style.display = 'inline-block';
