@@ -99,7 +99,7 @@ btnNewGame.addEventListener('click', () => {
 
 //victory condition
 function victory() {
-  if (scoreNumb1 >= 100) {
+  if (scoreNumb1 >= 10) {
     //document.querySelector('#victory-box').style.display = 'inline-block';
     //var x = document.getElementById('victory-box');
     document.querySelector('#victory').style.display = 'inline-block';
@@ -109,7 +109,7 @@ function victory() {
     btnRoll.style.display = 'none';
     btnHold.style.display = 'none';
     
-  } else if (scoreNumb2 >= 100) {
+  } else if (scoreNumb2 >= 10) {
     document.querySelector('#victory').style.display = 'inline-block';
     document.querySelector('#victory').innerHTML = "Player 2 wins !";
 

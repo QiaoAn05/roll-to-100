@@ -91,10 +91,11 @@ img {
 }
 
 #victory {
-  font-size: 4rem;
+  font-size: 3.5rem;
   font-weight: bold;
   color: red;
   margin-bottom: 10%;
+  text-align: center;
 }
 
 @media screen and (min-width: 820px) {
