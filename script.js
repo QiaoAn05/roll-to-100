@@ -23,13 +23,23 @@ const faceOne = new Audio('./audio/One.ogg');
 const newGameAudio = new Audio('./audio/NewGame.ogg');
 const victoryAudio = new Audio('./audio/Victory.ogg');
 
+function noName() {
+  if (name1.innerHTML === "") {
+      name1.innerHTML = "Player 1";
+  }
+  if (name2.innerHTML === "") {
+    name2.innerHTML = "Player 2";
+  }
+};
+
 //new Game init after load and function
 newGame()
 
 function newGame() {
     newGameAudio.play();
     name1.innerHTML = prompt('Choose a name for player 1:');
-    name2.innerHTML = prompt('Choose a name for player 2:')
+    name2.innerHTML = prompt('Choose a name for player 2:');
+    noName();
     btnRoll.style.display = 'inline-block';
     btnHold.style.display = 'inline-block';
     document.querySelector('#image').style.display = 'inline-block';
