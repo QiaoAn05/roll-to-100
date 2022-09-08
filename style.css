@@ -1,7 +1,10 @@
+@import url('https://fonts.googleapis.com/css2?family=Lato&display=swap');
+
 html, body {
   height: 100vh;
   width: 100%;
   margin: 0;
+  font-family: 'Lato', sans-serif;
 }
 
 .container {
@@ -67,6 +70,7 @@ img {
     border-radius: 5px;
     cursor: pointer;
     background: transparent;
+    font-family: 'Lato', sans-serif;
   }
 
   button:hover {
